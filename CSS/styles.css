@@ -1,0 +1,135 @@
+* {
+    font-size: 16px;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+p {
+    background-color: transparent;
+}
+
+span {
+    color: green;
+}
+
+/* AQUI VA TODO LO DEL ENCABEZADO */
+header {
+    width: 100%;
+    height: 7rem;
+    background-color: gray;
+    border-bottom: solid black 5px;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+}
+
+header #bank-logo-top {
+    height: auto;
+    margin: 0 2rem;
+    border-radius: 100%;
+    justify-content: center;
+}
+
+header #bank-name {
+    width: 90%;
+}
+
+header #bank-name h1 {
+    font-size: 2.5rem;
+    background-color: transparent;
+}
+
+header #bank-logo-top img {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+}
+
+/* AQUI VA TODO EL MAIN */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    padding: 2px;
+    border-color: 5px solid black;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#left-menu, #right-menu {
+    padding: 2rem;
+    border-color: solid black 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h3 {
+    margin-bottom: 5px;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+form button {
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(209, 209, 209);
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(171, 171, 171);
+}
+
+/* AQUI VA EL FOOTER */
+
+footer {
+    width: 100%;
+    height: 4rem;
+    background-color: gray;
+    margin-top: auto;
+}
+
+.pie-pagina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: solid black 5px;
+}
+
+footer #bank-logo-bot {
+    display: flex;
+    align-items: center;
+}
+
+footer #bank-logo-bot img{
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    margin: 0 2rem;
+}
+
+#extra-info {
+    text-align: right;
+    margin-right: 2rem;
+}

@@ -1,0 +1,16 @@
+.main-container2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12rem;
+}
+
+.up-menu {
+    padding: 2rem;
+}
+
+button {
+    padding: 0.2rem 0.3rem;
+    margin: 0 0.5rem;
+}
