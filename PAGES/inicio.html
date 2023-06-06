@@ -26,9 +26,42 @@
                 <h3>¿QUE TRANSACCION QUIERES REALIZAR HOY?</h3>
             </div>
             <div class="down-menu">
-                <a href="./saldo.html" type="button" id="page-saldo"><button>Consultar tu saldo</button></a>
-                <a href="./retiro.html" type="button" id="page-retiro"><button>Retirar dinero</button></a>
-                <a href="./deposito.html" type="button" id="page-deposito"><button>Consignar dinero</button></a>
+                <button id="saldo-button">Consultar tu saldo</button></a>
+                <button id="retiro-button">Retirar dinero</button></a>
+                <button id="deposito-button">Consignar dinero</button></a>
+            </div>
+        </section>
+
+        <!-- MODALES -->
+        
+        <section class="modal-container">
+        <!-- MODAL DE SALDO -->
+            <div id="saldoModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Saldo</h2>
+                    <p id="saldoValue"></p>
+                </div>
+            </div>
+
+        <!-- MODAL DE DEPOSITO -->
+            <div id="depositoModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Realizar depósito</h2>
+                    <input type="number" id="depositoInput" placeholder="Ingrese la cantidad">
+                    <button id="depositoConfirmar">Confirmar</button>
+                </div>
+            </div>
+
+        <!-- MODAL DE RETIRO -->
+            <div id="retiroModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Realizar retiro</h2>
+                    <input type="number" id="retiroInput" placeholder="Ingrese la cantidad">
+                    <button id="retiroConfirmar">Confirmar</button>
+                </div>
             </div>
         </section>
     </main>

@@ -3,14 +3,98 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 12rem;
+    margin-top: 10rem;
+    border-style: groove;
 }
 
 .up-menu {
     padding: 2rem;
 }
 
+.down-menu {
+    padding: 0.5rem 0 2rem 0;
+}
+
 button {
     padding: 0.2rem 0.3rem;
     margin: 0 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+h2 {
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+}
+
+/* ASPECTO DE MODALES */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 64px 48px;
+    border: 1px solid #888;
+    border-style: double;
+    width: 80%;
+    max-width: 400px;
+}
+
+.modal .modal-content>span {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    position: relative;
+}
+
+.modal .modal-content>h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.modal .modal-content>p {
+    font-size: 1.8rem;
+    text-align: center;
+    align-items: center;
+}
+
+.modal .modal-content>input {
+    width: 180px;
+    height: 28px;
+    padding: 0 5px;
+    margin-left: 48px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
