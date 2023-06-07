@@ -21,15 +21,7 @@ let retiroModal = document.getElementById('retiroModal');
 const saldoValue = document.getElementById('saldoValue');
 
 
-// CERRAR EL MODAL
-let closeButtons = document.getElementsByClassName('close');
-let modals = document.getElementsByClassName('modal');
-
 // MOSTRAR MODAL DEL SALDO
-saldoButton.addEventListener('click', function() {
-    saldoModal.style.display = 'block';
-});
-
 saldoButton.addEventListener('click', function() {
     const saldo = localStorage.getItem('saldo');
     saldoValue.textContent = `$${saldo}`;
@@ -53,14 +45,14 @@ let retiroInput = document.getElementById('retiroInput');
 // CONDICIONALES DE RETIRO
 retiroConfirmarButton.addEventListener('click', function() {
     let cantidadRetiro = parseInt(retiroInput.value);
-
+    
     if (isNaN(cantidadRetiro) || cantidadRetiro <= 0) {
         alert('Ingrese una cantidad válida para el retiro.');
         return;
     }
-
+    
     let saldoActual = parseInt(localStorage.getItem('saldo'));
-
+    
     if (cantidadRetiro > saldoActual) {
         alert('No tienes suficiente saldo para realizar el retiro.');
         return;
@@ -70,12 +62,12 @@ retiroConfirmarButton.addEventListener('click', function() {
         alert('El saldo mínimo permitido es de $10. No es posible realizar el retiro.');
         return;
     }
-
+    
     let saldoNuevo = saldoActual - cantidadRetiro;
     localStorage.setItem('saldo', saldoNuevo.toString());
-
+    
     alert('Retiro exitoso. Nuevo saldo: $' + saldoNuevo);
-
+    
     closeModal();
 });
 
@@ -86,36 +78,39 @@ let depositoInput = document.getElementById('depositoInput');
 // CONDICIONALES DE DEPOSITO
 depositoConfirmarButton.addEventListener('click', function() {
     let cantidadDeposito = parseInt(depositoInput.value);
-
+    
     if (isNaN(cantidadDeposito) || cantidadDeposito <= 0) {
         alert('Ingrese una cantidad válida para el depósito.');
         return;
     }
-
+    
     let saldoActual = parseInt(localStorage.getItem('saldo'));
-
+    
     if (saldoActual + cantidadDeposito > 990) {
         alert('El saldo máximo permitido es de $990. No es posible realizar el depósito.');
         return;
     }
-
+    
     let saldoNuevo = saldoActual + cantidadDeposito;
     localStorage.setItem('saldo', saldoNuevo.toString());
 
     alert('Depósito exitoso. Nuevo saldo: $' + saldoNuevo);
-
+    
     closeModal();
 });
 
+// CERRAR EL MODAL
+let closeButtons = document.getElementsByClassName('close');
+let modals = document.getElementsByClassName('modal');
 
-// CERRAR MODALES "X"
+// CERRAR MODALES CON "X"
 for (let i = 0; i < closeButtons.length; i++) {
     closeButtons[i].addEventListener('click', function() {
         closeModal();
     });
 }
 
-// CERRAR MODALES "CLIC FUERA"
+// CERRAR MODALES CON "CLIC FUERA"
 window.addEventListener('click', function(event) {
     if (event.target.classList.contains('modal')) {
         closeModal();
